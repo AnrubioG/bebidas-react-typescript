@@ -1,6 +1,7 @@
 import { z } from "zod";
 import {
   CategoriesAPIResponseSchema,
+  DrinkAPIResponseSchema,
   DrinksAPIResponseSchema,
   SerachFilterSchema,
 } from "./utils/recipes-schema";
@@ -8,3 +9,4 @@ import {
 export type Categories = z.infer<typeof CategoriesAPIResponseSchema>;
 export type SerachFilter = z.infer<typeof SerachFilterSchema>;
 export type Drinks = z.infer<typeof DrinksAPIResponseSchema>;
+export type Drink = z.infer<typeof DrinkAPIResponseSchema>;

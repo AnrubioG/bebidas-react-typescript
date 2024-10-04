@@ -45,7 +45,7 @@ export function Header() {
     <header
       className={isHome ? "bg-header bg-center bg-cover" : "bg-slate-900"}
     >
-      <div className="mx-auto px-5 py-16 container">
+      <div className="mx-auto px-12 sm:px-16 py-16 container">
         <div className="flex justify-between items-center">
           <div className="">
             <img className="w-32" src="/logo.svg" alt="logotipo" />
