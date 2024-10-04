@@ -1,10 +1,15 @@
 import { StateCreator } from "zustand";
-import { getCategories, getRecipes } from "../services/RecipeService";
-import { Categories, Drink, Drinks, SerachFilter } from "../types";
+import {
+  getCategories,
+  getRecipeById,
+  getRecipes,
+} from "../services/RecipeService";
+import { Categories, Drink, Drinks, Recipe, SerachFilter } from "../types";
 
 export type RecipesSliceType = {
   categories: Categories;
   drinks: Drinks;
+  selectedRecipe: Recipe;
   fetchCategories: () => Promise<void>;
   searchRecipes: (serachFilter: SerachFilter) => Promise<void>;
   selectRecipe: (id: Drink["idDrink"]) => Promise<void>;
@@ -18,6 +23,8 @@ export const createRecipesSlice: StateCreator<RecipesSliceType> = (set) => ({
   drinks: {
     drinks: [],
   },
+
+  selectedRecipe: {} as Recipe,
 
   fetchCategories: async () => {
     const categories = await getCategories();
@@ -34,6 +41,9 @@ export const createRecipesSlice: StateCreator<RecipesSliceType> = (set) => ({
   },
 
   selectRecipe: async (id) => {
-    console.log(id);
+    const selectedRecipe = await getRecipeById(id);
+    set({
+      selectedRecipe,
+    });
   },
 });

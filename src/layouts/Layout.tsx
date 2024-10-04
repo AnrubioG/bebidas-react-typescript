@@ -1,5 +1,6 @@
 import { Outlet } from "react-router-dom";
 import { Header } from "../components/Header";
+import Modal from "../components/Modal";
 
 export function Layout() {
   return (
@@ -8,6 +9,8 @@ export function Layout() {
       <main className="container px-12 sm:px-48 py-16">
         <Outlet />
       </main>
+
+      <Modal />
     </>
   );
 }
