@@ -8,7 +8,7 @@ export function IndexPage() {
   const hasDrinks = useMemo(() => drinks.drinks.length, [drinks]);
   return (
     <div>
-      <h1 className="text-6xl font-extrabold">Bebidas</h1>
+      <h1 className="text-6xl font-extrabold">Recipes</h1>
       {hasDrinks ? (
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 my-10 gap-10">
           {drinks.drinks.map((drink) => (
@@ -17,7 +17,7 @@ export function IndexPage() {
         </div>
       ) : (
         <p className="my-10 text-center text-2xl">
-          No hay resultados aún, utiliza el formulario para buscar recetas
+          No results yet, use the form to search for recipes
         </p>
       )}
     </div>

@@ -57,7 +57,7 @@ export function Header() {
               }
               to="/"
             >
-              Inicio
+              Home
             </NavLink>
             <NavLink
               className={({ isActive }) =>
@@ -65,7 +65,7 @@ export function Header() {
               }
               to="/favoritos"
             >
-              Favoritos
+              Favorites
             </NavLink>
           </nav>
         </div>
@@ -79,14 +79,14 @@ export function Header() {
                 htmlFor="ingredient"
                 className="text-white uppercase font-extrabold text-lg"
               >
-                Nombre o Ingredientes
+                Name or Ingredients
               </label>
               <input
                 id="ingredient"
                 type="text"
                 name="ingredient"
                 className="p-3 w-full rounded-lg focus:outline-none"
-                placeholder="Nombre o ingrediente. Ej. vodka, Tequila, Café"
+                placeholder="Name or ingredient. Example: vodka, Tequila, Coffee."
                 onChange={handleChange}
                 value={searchFilters.ingredient}
               />
@@ -96,7 +96,7 @@ export function Header() {
                 htmlFor="category"
                 className="text-white uppercase font-extrabold text-lg"
               >
-                Categoria
+                Category
               </label>
               <select
                 id="category"
@@ -105,7 +105,7 @@ export function Header() {
                 onChange={handleChange}
                 value={searchFilters.category}
               >
-                <option>---Seleccione</option>
+                <option>--- Select ---</option>
                 {categories.drinks.map((category) => (
                   <option
                     value={category.strCategory}
@@ -118,7 +118,7 @@ export function Header() {
             </div>
             <input
               type="submit"
-              value="Buscar Recetas"
+              value="Search Recipes"
               className="cursor-pointer bg-orange-800 hover:bg-orange-900 text-white w-full p-2 rounded-lg uppercase font-extrabold"
             />
           </form>
