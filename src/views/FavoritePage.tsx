@@ -2,7 +2,7 @@ import { useMemo } from "react";
 import DrinkCard from "../components/DrinkCard";
 import { useAppStore } from "../stores/useAppStore";
 
-export function FavoritePage() {
+export default function FavoritePage() {
   const favorites = useAppStore((state) => state.favorites);
   const hasFavorites = useMemo(() => favorites.length, [favorites]);
 

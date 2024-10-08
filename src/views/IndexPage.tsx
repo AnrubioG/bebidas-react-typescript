@@ -2,7 +2,7 @@ import { useMemo } from "react";
 import { useAppStore } from "../stores/useAppStore";
 import DrinkCard from "../components/DrinkCard";
 
-export function IndexPage() {
+export default function IndexPage() {
   const drinks = useAppStore((state) => state.drinks);
 
   const hasDrinks = useMemo(() => drinks.drinks.length, [drinks]);
