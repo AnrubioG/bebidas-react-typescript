@@ -72,7 +72,7 @@ export default function Modal() {
                     as="h3"
                     className="text-gray-900 text-2xl font-extrabold my-5"
                   >
-                    Ingredientes y Cantidades
+                    Ingredients and quantities
                   </Dialog.Title>
                   {renderIngredients()}
 
@@ -80,7 +80,7 @@ export default function Modal() {
                     as="h3"
                     className="text-gray-900 text-2xl font-extrabold my-5"
                   >
-                    Instrucciones
+                    Instructions
                   </Dialog.Title>
                   <p>{selectedRecipe.strInstructions}</p>
                   <div className="mt-5 flex justify-between gap-4">
@@ -89,7 +89,7 @@ export default function Modal() {
                       className="w-full bg-gray-600 p-3 font-bold uppercase text-white shadow hover:bg-gray-500"
                       onClick={closeModal}
                     >
-                      Cerrar
+                      Close
                     </button>
                     <button
                       type="button"
@@ -100,8 +100,8 @@ export default function Modal() {
                       }}
                     >
                       {favoriteExists(selectedRecipe.idDrink)
-                        ? "Eliminar favorito"
-                        : "Agregar a favoritos"}
+                        ? "Remove favorite"
+                        : "Add to favorites"}
                     </button>
                   </div>
                 </Dialog.Panel>
